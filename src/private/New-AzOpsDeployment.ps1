@@ -77,7 +77,7 @@ function New-AzOpsDeployment {
                     }
                 }
                 else {
-                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message)"
+                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message) for template $templateFilePath"
                 }
             }
             elseif ($scope.subscription) {
@@ -109,7 +109,7 @@ function New-AzOpsDeployment {
                     }
                 }
                 else {
-                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message)"
+                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message) for template $templateFilePath"
                 }
             }
             elseif ($scope.managementGroup) {
@@ -138,7 +138,7 @@ function New-AzOpsDeployment {
                     }
                 }
                 else {
-                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message)"
+                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message) for template $templateFilePath"
                 }
             }
             elseif ($scope.type -eq 'root' -and $scope.scope -eq '/') {
@@ -166,7 +166,7 @@ function New-AzOpsDeployment {
                     }
                 }
                 else {
-                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message)"
+                    Write-AzOpsLog -Level Error -Topic "New-AzOpsDeployment" -Message "Template Validation Failed $($results.Message) for template $templateFilePath"
                 }
             }
             else {
